@@ -1,21 +1,181 @@
+# Общее описание решения
 
-# How to use calculator:
-1. Run `python calculate.py`
-2. Enter the figure name. Available are Circle, Square.
-3. Enter the function: Area or Perimeter.
-4. Enter figure sizes. Radius for circle, one side for square.
-5. Get the answer!
+Данный скрипт позволяет находить площадь и периметр квадрата, круга.
 
-# Math formulas
-## Area
-- Circle: `S = πR²`
-- Rectangle: `S = ab`
-- Square: `S = a²`
-- Triangle: `S = sqrt(p * (p-a) * (p-b) * (p-c))` where p is semiperimeter
+Пользователь выбирает фигуру, функцию (нахождение площади либо периметра), затем длины сторон фигуры (радиус, если круг).
 
-## Perimeter
-- Circle: `P = 2πR`
-- Rectangle: `P = 2a + 2b`
-- Square: `P = 4a`
-- Triangle: `P = a + b + c`
+Результат вычислений выводится на экран.
 
+  
+
+Значения площади и периметра вычисляются по следующим формулам:
+
+  
+
+## Математические формулы
+
+### Площадь
+
+- Круг: `S = πR²`
+
+- Квадрат: `S = a²`
+
+- Треугольник: `S = (a + b + c) / 2`
+
+  
+
+### Периметр
+
+- Круг: `P = 2πR`
+
+- Квадрат: `P = 4a`
+
+- Треугольник: `P = a + b + c`
+
+  
+  
+
+# Как использовать калькулятор:
+
+1. Запустить `python calculate.py`
+
+2. Ввести имя фигуры. Доступны: Circle (круг), Square (квадрат).
+
+3. Ввести имя функции: Area (площадь) или Perimeter (периметр).
+
+4. Ввести размеры фигуры. Радиус для круга, Одну сторону для квадрата.
+
+5. Получить результат
+
+  
+
+# Описание функций модулей:
+## Для использования функций модулей их нужно импортировать в ваш файл
+```python
+import circle # в начале вашего .py
+import square
+import triangle
+```
+## Square 
+
+
+### def area(a):
+
+- Возвращает площадь квадрата со стороной длины a:
+
+- Параметры: a (float) - сторона квадрата
+
+- Возвращаемое значение: area (float) - площадь квадрата
+ 
+- Пример использования 
+  ```python
+  a = 10
+  area_a = area(a) 
+  ```
+
+  
+
+### def perimeter(a):
+
+- Возвращает периметр квадрата со стороной длины a:
+
+- Параметры: a (float) - сторона квадрата
+
+- Возвращаемое значение: perimeter (float) - периметр квадрата
+
+- Пример использования 
+  ```python
+  a = 10
+  perimeter_a = perimeter(a) 
+  ```
+
+  
+
+## Circle
+
+### def area(r.):
+- Возвращает площадь круга с радиусом r:
+
+- Параметры: r (float) - радиус круга
+
+- Возвращаемое значение: area (float) - площадь круга
+
+  - Пример использования 
+  ```python
+  r = 10
+  area_r = area(r) 
+  ```
+  
+
+### def perimeter(r.):
+
+- Возвращает периметр круга с радиусом r:
+
+- Параметры: r (float) - радиус круга
+
+- Возвращаемое значение: perimeter (float) - периметр круга
+ 
+- Пример использования 
+  ```python
+  r = 10
+  perimeter_r = perimeter(r) 
+  ```
+
+  
+  
+
+## Triangle
+
+### def area(a, b, c):
+
+- Возвращает площадь треугольника со сторонами длины a, b, c:
+
+- Параметры:
+
+  a (float) - длина стороны треугольника a
+
+  b (float) - длина стороны треугольника b
+
+  c (float) - длина стороны треугольника c
+
+- Возвращаемое значение: area (float) - площадь треугольника
+
+- Пример использования 
+  ```python
+  a, b, c = 10
+  area_a = area(a, b, c) 
+  ```
+  
+
+### def perimeter(a, b, c):
+
+- Возвращает периметр треугольника со сторонами длины a, b, c:
+
+- Параметры:
+
+  a (float) - длина стороны треугольника a
+
+  b (float) - длина стороны треугольника b
+
+  c (float) - длина стороны треугольника c
+
+- Возвращаемое значение: perimeter (float) - периметр треугольника
+ 
+- Пример использования 
+  ```python
+  a, b, c = 10
+  perimeter_a = perimeter(a, b, c) 
+  ```
+
+
+# История изменения проекта
+
+## Коммиты (develop)
+```
+- b5b0fae727ca72c317c383b39c0af73d6adcd81c L-04: Update docs for calculate.py
+- d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71 L-04: Add calculate.py
+- 51c40ebfd0e0b65f52fe5e54740cbb038e492db3 L-04: Doc updated for triangle
+- d080c7888b81955bad2ed78d58ad910526b5132a L-04: Triangle added
+- d078c8d9ee6155f3cb0e577d28d337b791de28e2 L-03: Docs added
+- 8ba9aeb3cea847b63a91ac378a2a6db758682460 L-03: Circle and square added
+```
