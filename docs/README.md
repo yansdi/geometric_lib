@@ -51,7 +51,7 @@
 
 # Описание функций модулей:
 ## Для использования функций модулей их нужно импортировать в ваш файл
-```
+```python
 import circle # в начале вашего .py
 import square
 import triangle
@@ -68,7 +68,7 @@ import triangle
 - Возвращаемое значение: area (float) - площадь квадрата
  
 - Пример использования 
-  ```
+  ```python
   a = 10
   area_a = area(a) 
   ```
@@ -84,7 +84,7 @@ import triangle
 - Возвращаемое значение: perimeter (float) - периметр квадрата
 
 - Пример использования 
-  ```
+  ```python
   a = 10
   perimeter_a = perimeter(a) 
   ```
@@ -101,7 +101,7 @@ import triangle
 - Возвращаемое значение: area (float) - площадь круга
 
   - Пример использования 
-  ```
+  ```python
   r = 10
   area_r = area(r) 
   ```
@@ -116,7 +116,7 @@ import triangle
 - Возвращаемое значение: perimeter (float) - периметр круга
  
 - Пример использования 
-  ```
+  ```python
   r = 10
   perimeter_r = perimeter(r) 
   ```
@@ -141,7 +141,7 @@ import triangle
 - Возвращаемое значение: area (float) - площадь треугольника
 
 - Пример использования 
-  ```
+  ```python
   a, b, c = 10
   area_a = area(a, b, c) 
   ```
@@ -162,7 +162,7 @@ import triangle
 - Возвращаемое значение: perimeter (float) - периметр треугольника
  
 - Пример использования 
-  ```
+  ```python
   a, b, c = 10
   perimeter_a = perimeter(a, b, c) 
   ```
